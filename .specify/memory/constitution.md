@@ -1,55 +1,44 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: N/A → 1.0.0
+Added sections: All sections are new as this is the initial constitution
+Removed sections: N/A
+Modified principles: N/A
+Templates requiring updates:
+- .specify/templates/plan-template.md: ✅ No changes needed - uses constitution gates
+- .specify/templates/spec-template.md: ✅ No changes needed - generic template
+- .specify/templates/tasks-template.md: ✅ No changes needed - generic template
+Follow-up TODOs: None
+-->
+# Evolution of Todo Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-First Development
+All code generation must originate from formal specifications; no manual coding is permitted during implementation. Every feature and behavior must be explicitly defined in specifications before any code generation occurs.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. No Vibe Coding
+Strict adherence to specifications is mandatory; no improvisation, experimentation, or feature additions beyond the defined scope. Implementation must follow specifications exactly without creative interpretation.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Deterministic Behavior
+The application must exhibit predictable and consistent behavior across all executions. No random or variable behavior is acceptable unless explicitly defined in the specification.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Simplicity Over Cleverness
+Implementation must prioritize clean, simple, and readable code over complex or clever solutions. The focus is on maintainable and understandable code rather than sophisticated algorithms.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Console-Only Python Application
+The application must be a pure Python console application with no web framework dependencies. No AI/chatbot features or external service integrations are permitted in this phase.
 
-### [PRINCIPLE_6_NAME]
+### VI. In-Memory Storage Only
+Data persistence must be in-memory only with no external database dependencies. All data exists only during the application runtime and is lost upon termination.
 
+## Constraints
+Python console app only. In-memory storage only. No database. No web framework. No AI/chatbot features. Phase 1: In-Memory Python Console Todo App. No manual coding allowed - Claude Code will generate all code from specs.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Success Criteria
+All 5 basic todo features work correctly. App runs properly from terminal. Clean Python project structure established. Behavior matches specifications exactly. Implementation follows Spec-Driven Development methodology.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution governs all development activities for the Evolution of Todo project. All code generation must comply with these principles. Amendments require explicit documentation and approval. All outputs must be verifiable against specifications.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-03 | **Last Amended**: 2026-01-03
